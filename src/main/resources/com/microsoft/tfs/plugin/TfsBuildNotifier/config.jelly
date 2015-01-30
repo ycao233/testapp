@@ -1,0 +1,26 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
+    <f:entry field="serverUrl" title="VSO Server URL">
+        <f:textbox />
+    </f:entry>
+
+    <f:entry field="username" title="Login name">
+        <f:textbox clazz="required" checkMessage="${%Username is mandatory.}"/>
+    </f:entry>
+
+    <f:entry field="password" title="User password">
+        <f:password />
+    </f:entry>
+
+    <f:entry field="project" title="Project">
+        <f:select />
+    </f:entry>
+
+    <f:entry field="buildDefinition" title="Build Definition">
+        <f:select />
+    </f:entry>
+
+    <f:validateButton title="Test Connection" progress="Checking for existance of build definition..."
+                      method="testConnection" with="serverUrl,username,password,project,buildDefinition"/>
+
+</j:jelly>
