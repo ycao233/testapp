@@ -6,7 +6,6 @@ public class App {
     //1 more change
     public static void main(String[] args) {
         Calculator c = new Calculator();
-        System.out.println(c.addition(1, 4));
     }
 
 }
